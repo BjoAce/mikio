@@ -1,4 +1,5 @@
 <?php
+
 /**
  * DokuWiki Mikio Template Configuration Metadata
  *
@@ -25,6 +26,18 @@ $meta['navbarPosMiddle']        = array('multichoice', '_choices' => array('none
 $meta['navbarPosRight']         = array('multichoice', '_choices' => array('none', 'custom', 'search', 'dokuwiki'));
 $meta['navbarShowSub']          = array('onoff');
 
+$meta['navbarItemShowCreate']   = array('multichoice', '_choices' => array('always', 'logged in', 'logged out', 'never'));
+$meta['navbarItemShowShow']     = array('multichoice', '_choices' => array('always', 'logged in', 'logged out', 'never'));
+$meta['navbarItemShowRevs']     = array('multichoice', '_choices' => array('always', 'logged in', 'logged out', 'never'));
+$meta['navbarItemShowBacklink'] = array('multichoice', '_choices' => array('always', 'logged in', 'logged out', 'never'));
+$meta['navbarItemShowRecent']   = array('multichoice', '_choices' => array('always', 'logged in', 'logged out', 'never'));
+$meta['navbarItemShowMedia']    = array('multichoice', '_choices' => array('always', 'logged in', 'logged out', 'never'));
+$meta['navbarItemShowIndex']    = array('multichoice', '_choices' => array('always', 'logged in', 'logged out', 'never'));
+$meta['navbarItemShowProfile']  = array('multichoice', '_choices' => array('always', 'logged in', 'logged out', 'never'));
+$meta['navbarItemShowAdmin']    = array('multichoice', '_choices' => array('always', 'logged in', 'logged out', 'never'));
+$meta['navbarItemShowLogin']    = array('multichoice', '_choices' => array('always', 'never'));
+$meta['navbarItemShowLogout']   = array('multichoice', '_choices' => array('always', 'never'));
+
 $meta['searchButton']           = array('multichoice', '_choices' => array('icon', 'text'));
 
 $meta['heroTitle']              = array('onoff');
@@ -38,8 +51,15 @@ $meta['breadcrumbPrefix']       = array('onoff');
 $meta['breadcrumbPrefixText']   = array('string');
 $meta['breadcrumbSep']          = array('onoff');
 $meta['breadcrumbSepText']      = array('string');
-$meta['breadcrumbHome']         = array('multichoice', '_choices' => array('none', 'page title', 'home', 'icon'));
-$meta['breadcrumbShowLast']     = array('numeric');
+
+$meta['youarehereHideHome']     = array('onoff');
+$meta['youareherePosition']     = array('multichoice', '_choices' => array('none', 'top', 'hero', 'page'));
+$meta['youareherePrefix']       = array('onoff');
+$meta['youareherePrefixText']   = array('string');
+$meta['youarehereSep']          = array('onoff');
+$meta['youarehereSepText']      = array('string');
+$meta['youarehereHome']         = array('multichoice', '_choices' => array('none', 'page title', 'home', 'icon'));
+$meta['youarehereShowLast']     = array('numeric');
 
 $meta['sidebarShowLeft']        = array('onoff');
 $meta['sidebarAlwaysShowLeft']  = array('onoff');
@@ -47,7 +67,7 @@ $meta['sidebarLeftRow1']        = array('multichoice', '_choices' => array('none
 $meta['sidebarLeftRow2']        = array('multichoice', '_choices' => array('none', 'logged in user', 'search', 'content', 'tags'));
 $meta['sidebarLeftRow3']        = array('multichoice', '_choices' => array('none', 'logged in user', 'search', 'content', 'tags'));
 $meta['sidebarLeftRow4']        = array('multichoice', '_choices' => array('none', 'logged in user', 'search', 'content', 'tags'));
-$meta['sidebarMobileDefaultCollapse']	= array('onoff');
+$meta['sidebarMobileDefaultCollapse']    = array('onoff');
 $meta['sidebarShowRight']       = array('onoff');
 $meta['sidebarAlwaysShowRight'] = array('onoff');
 
@@ -55,6 +75,12 @@ $meta['tocFull']                = array('onoff');
 
 $meta['pageToolsFloating']      = array('multichoice', '_choices' => array('none', 'page editors', 'always'));
 $meta['pageToolsFooter']        = array('multichoice', '_choices' => array('none', 'page editors', 'always'));
+
+$meta['pageToolsShowCreate']    = array('multichoice', '_choices' => array('always', 'logged in', 'logged out', 'never'));
+$meta['pageToolsShowEdit']      = array('multichoice', '_choices' => array('always', 'logged in', 'logged out', 'never'));
+$meta['pageToolsShowRevs']      = array('multichoice', '_choices' => array('always', 'logged in', 'logged out', 'never'));
+$meta['pageToolsShowBacklink']  = array('multichoice', '_choices' => array('always', 'logged in', 'logged out', 'never'));
+$meta['pageToolsShowTop']       = array('multichoice', '_choices' => array('always', 'logged in', 'logged out', 'never'));
 
 $meta['footerCustomMenuText']   = array('string');
 $meta['footerSearch']           = array('onoff');
@@ -65,4 +91,7 @@ $meta['licenseImageOnly']       = array('onoff');
 
 $meta['includePageUseACL']      = array('onoff');
 $meta['includePagePropagate']   = array('onoff');
-?>
+
+$meta['stickyTopHeader']        = array('onoff');
+$meta['stickyNavbar']           = array('onoff');
+$meta['stickyHeader']           = array('onoff');

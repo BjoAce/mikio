@@ -35,18 +35,21 @@ $showSidebar = $hasSidebar && ($ACT=='show');
 <div id="dokuwiki__site">
 <?php
     echo '<div id="dokuwiki__top" class="site ' . tpl_classes() . (($showSidebar) ? ' showSidebar' : '') . (($hasSidebar) ? ' hasSidebar' : '') . '">';
-    $TEMPLATE->includePage('topheader', TRUE, TRUE, 'mikio-page-topheader');
+    $TEMPLATE->includePage('topheader', TRUE, TRUE, 'mikio-page-topheader' . (($TEMPLATE->getConf('stickyTopHeader')) ? ' mikio-sticky' : ''));
     $TEMPLATE->includeNavbar(TRUE, $TEMPLATE->getConf('navbarShowSub', FALSE) && $ACT == 'show');
-    if($ACT == 'show' || $ACT == 'admin') $TEMPLATE->includePage('header', TRUE, TRUE, 'mikio-page-header');
+    if($ACT == 'show' || $ACT == 'admin') $TEMPLATE->includePage('header', TRUE, TRUE, 'mikio-page-header' . (($TEMPLATE->getConf('stickyHeader')) ? ' mikio-sticky' : ''));
 
     echo '<a name="dokuwiki__top" id="dokuwiki__top"></a>';
 
-    if(($ACT == 'show' && $TEMPLATE->getConf('breadcrumbPosition') == 'top') || ($ACT == 'show' && $TEMPLATE->getConf('breadcrumbPosition') == 'hero' && $TEMPLATE->getConf('heroTitle') == FALSE) || ($ACT != 'show')) $TEMPLATE->includeBreadcrumbs();
+    if(($ACT == 'show' && $TEMPLATE->getConf('youareherePosition') == 'top') || ($ACT == 'show' && $TEMPLATE->getConf('youareherePosition') == 'hero' && $TEMPLATE->getConf('heroTitle') == FALSE) || ($ACT != 'show')) $TEMPLATE->includeYouAreHere();
+    if(($ACT == 'show' && $TEMPLATE->getConf('breadcrumbPosition') == 'top') || ($ACT == 'show' && $TEMPLATE->getConf('breadcrumbPosition') == 'hero' && $TEMPLATE->getConf('heroTitle') == FALSE)) $TEMPLATE->includeBreadcrumbs();
     if($ACT == 'show' && $TEMPLATE->getConf('heroTitle')) $TEMPLATE->includeHero();
 
     echo '<main class="mikio-page">';
+    echo '<div class="mikio-container">';
         if($showSidebar) $TEMPLATE->includeSidebar();
         echo '<div class="mikio-content" id="dokuwiki__content">';
+            if($ACT == 'show' && $TEMPLATE->getConf('youareherePosition') == 'page') $TEMPLATE->includeYouAreHere();
             if($ACT == 'show' && $TEMPLATE->getConf('breadcrumbPosition') == 'page') $TEMPLATE->includeBreadcrumbs();
 
             $TEMPLATE->showMessages();
@@ -65,6 +68,7 @@ $showSidebar = $hasSidebar && ($ACT=='show');
 
         $rightsidebar = '';
         if($showSidebar) $rightsidebar = $TEMPLATE->includeSidebar('right');
+    echo '</div>';
     echo '</main>';
     echo '<div class="mikio-page-fill">';
         echo '<div class="mikio-content" style="padding:0">';

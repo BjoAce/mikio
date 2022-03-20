@@ -18,16 +18,19 @@ $lang['config_search']                      = 'Search';
 $lang['config_hero']                        = 'Hero';
 $lang['config_tags']                        = 'Tags';
 $lang['config_breadcrumb']                  = 'Breadcrumb';
+$lang['config_youarehere']                  = 'You Are Here';
 $lang['config_sidebar']                     = 'Sidebars';
 $lang['config_toc']                         = 'Table of Contents';
 $lang['config_pagetools']                   = 'Page Tools';
 $lang['config_footer']                      = 'Footer';
 $lang['config_license']                     = 'License';
 $lang['config_acl']                         = 'Permissions';
+$lang['config_sticky']                      = 'Sticky Parts';
 
 /* Style.ini */
 $lang['__link__']                           = 'The font color of links';
 $lang['__line_height__']                    = 'The base font line height';
+$lang['__site_width__']                     = 'Width of the body content';
 
 $lang['__font_size__']                      = 'The base font size';
 $lang['__font_family__']                    = 'The base font family (fonts containing spaces must be in quotes. Multiple fonts can be seperated with commas)';
@@ -45,6 +48,9 @@ $lang['__control_text_color__']             = 'The font color for controls';
 $lang['__control_border_color__']           = 'The border color for controls';
 $lang['__control_background_color__']       = 'The background color for controls';
 $lang['__input_border_color__']             = 'The border color for controls';
+
+$lang['__topheader_background_color__']     = 'The background color for the top header part';
+$lang['__header_background_color__']        = 'The background color for the header part';
 
 $lang['__navbar_background_color__']        = 'The background color for the menu';
 $lang['__navbar_border_color__']            = 'The border color for the menu';
@@ -100,8 +106,10 @@ $lang['__footer_background_color__']        = 'The background color for the foot
 
 $lang['__table_font_size__']                = 'The font size for tables';
 $lang['__table_row_border_color__']         = 'The border color for tables';
-$lang['__table_odd_row_color__']            = 'The background color for table odd rows';
-$lang['__table_even_row_color__']           = 'The background color for table even rows';
+$lang['__table_odd_row_color__']            = 'The font color for table odd rows';
+$lang['__table_odd_row_background_color__'] = 'The background color for table odd rows';
+$lang['__table_even_row_color__']           = 'The font color for table even rows';
+$lang['__table_eveb_row_background_color__']    = 'The background color for table odd rows';
 
 $lang['__dropdown_color__']                 = 'The font color for dropdown menus';
 $lang['__dropdown_hover_color__']           = 'The font color when the cursor hovers over dropdown menu items';
@@ -109,4 +117,3 @@ $lang['__dropdown_border_color__']          = 'The border color for dropdown men
 $lang['__dropdown_background_color__']      = 'The background color for dropdown menus';
 
 $lang['__section_edit_highlight__']         = 'The color when highlighting an edit area';
-?>
