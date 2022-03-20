@@ -7,6 +7,8 @@
  * @license GPLv2 (http://www.gnu.org/licenses/gpl-2.0.html)
  */
 
+header('Cache-Control: public, max-age=31536000');
+
 if(!function_exists('getallheaders')) {
 	function getallheaders() {
 		$headers = [];
